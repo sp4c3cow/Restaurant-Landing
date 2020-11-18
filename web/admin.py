@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import ReservationForm
 
-# Register your models here.
+class AdminReservationForm(admin.ModelAdmin):
+    list_display = ['name', 'email', 'phone', 'date']
+
+admin.site.register(ReservationForm, AdminReservationForm)

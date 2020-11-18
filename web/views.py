@@ -19,7 +19,7 @@ def reserve_table(request):
                                       num_of_people=num_of_people, message=message)
         reservation.save()
 
-        return(request, 'html/success.html')
+        return render(request, 'html/success.html')
     else:
-        return(request, 'html/index.html')
+        return render(request, 'html/index.html')
 
